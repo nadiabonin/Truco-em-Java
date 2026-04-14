@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("=== TRUCO PAULISTA ===");
+        System.out.println("=== TRUCO PAULISTA aaaaaaaaaaaaaaaaaaa===");
         System.out.println("1 - Jogar local (4 jogadores no mesmo PC)");
         System.out.println("2 - Entrar em partida (cliente)");
         System.out.println("3 - Criar partida (servidor)");
