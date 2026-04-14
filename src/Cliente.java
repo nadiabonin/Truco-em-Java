@@ -3,12 +3,12 @@ import java.net.*;
 import java.util.Scanner;
 
 public class Cliente {
-
+//se comunica com o servidor
     public static void main(String[] args) throws IOException {
 
         Scanner scanner = new Scanner(System.in);
         Socket socket = new Socket(Configuracao.IP_SERVIDOR, Configuracao.PORTA);
-
+    //conecta no servidor, recebe uma mensagem do jogador, e uma saida do servidor
         PrintWriter saida = new PrintWriter(socket.getOutputStream(), true);
         BufferedReader entrada = new BufferedReader(
                 new InputStreamReader(socket.getInputStream())
@@ -18,7 +18,7 @@ public class Cliente {
 
         String mensagem;
 
-        // LOOP ÚNICO: lê mensagem → decide se responde
+        //le mensagem, decide se responde
         while ((mensagem = entrada.readLine()) != null) {
             System.out.println(mensagem);
 

@@ -45,9 +45,9 @@ public class Servidor {
             conexao.enviar(mensagem);
         }
     }
-
+//se comunica com os metodos public, jogo, jogador, conexaojogador, define os times
     private void iniciarJogo() throws IOException {
-        // Pega os 4 jogadores diretamente — sem Equipe!
+        // Pega os 4 jogadores
         Jogador j1 = conexoes.get(0).getJogador();
         Jogador j2 = conexoes.get(1).getJogador();
         Jogador j3 = conexoes.get(2).getJogador();
@@ -67,9 +67,9 @@ public class Servidor {
 
         // Resultado final
         if (jogo.getPontos1() >= 12) {
-            enviarParaTodos("🏆 Time 1 venceu o jogo!");
+            enviarParaTodos("Time 1 venceu o jogo!");
         } else {
-            enviarParaTodos("🏆 Time 2 venceu o jogo!");
+            enviarParaTodos("Time 2 venceu o jogo!");
         }
 
         for (ConexaoJogador conexao : conexoes) {

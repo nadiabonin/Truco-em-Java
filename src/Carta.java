@@ -6,11 +6,11 @@ public class Carta {
         this.valor = valor;
         this.naipe = naipe;
     }
-
+    
     public String getValor() {
         return valor;
     }
-
+    //converte em numerico, maior e menor valor
     public int getValorBase(){
         switch (valor){
 
@@ -31,7 +31,7 @@ public class Carta {
     public String getNaipe() {
         return naipe;
     }
-    
+    //converte em numerico
     public int getValorNaipe(){
         switch (naipe) {
         case "Paus": return 4;

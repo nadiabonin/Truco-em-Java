@@ -6,7 +6,7 @@ public class ConexaoJogador{
     private PrintWriter saida; //servidor manda mensagem pro cliente
     private BufferedReader entrada; //servidor recebe mensagem do cliente
     private Jogador jogador;
-    
+//ligação do servidor com o cliente
     public ConexaoJogador(Socket socket, Jogador jogador) throws IOException{
         this.socket = socket;
         this.jogador = jogador;
@@ -22,6 +22,7 @@ public class ConexaoJogador{
     public String recebe() throws IOException{
         return entrada.readLine();
     }
+//envia do servidor para o jogador especifico
     public void enviarMao(){
         enviar("\n === SUA MAO ===");
         for(int i = 0; i< jogador.getMao().size();i++){
